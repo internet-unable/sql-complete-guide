@@ -34,5 +34,5 @@
 
 -- Task #6
 -- Update table and add a primary key
-ALTER TABLE products
-ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+-- ALTER TABLE products
+-- ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
