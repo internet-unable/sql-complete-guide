@@ -6,9 +6,9 @@
 -- Add a table for products. Choose appropriate column names + data types
 -- CREATE TABLE products(
 --     product_name VARCHAR(200),
---     product_desc VARCHAR(600),
+--     product_desc TEXT,
 --     product_price NUMERIC(7,2),
---     product_amount_in_stock INTEGER,
+--     product_amount_in_stock SMALLINT,
 --     product_image VARCHAR(600)
 -- );
 
@@ -29,7 +29,7 @@
 -- ALTER COLUMN product_name SET NOT NULL,
 -- ALTER COLUMN product_desc SET NOT NULL,
 -- ADD CONSTRAINT product_price CHECK (product_price > 0),
--- ALTER COLUMN product_amount_in_stock SET NOT NULL,
+-- ALTER COLUMN product_amount_in_stock CHECK (product_amount_in_stock >= 0),
 -- ALTER COLUMN product_image SET NOT NULL;
 
 -- Task #6
