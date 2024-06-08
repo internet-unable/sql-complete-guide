@@ -25,9 +25,14 @@
 
 -- Task #5
 -- Update table and add sensible constraints
+-- ALTER TABLE products
+-- MODIFY COLUMN product_name VARCHAR(300) NOT NULL,
+-- MODIFY COLUMN product_desc VARCHAR(600) NOT NULL,
+-- MODIFY COLUMN product_price NUMERIC(7,2) CHECK (product_price > 0),
+-- MODIFY COLUMN product_amount_in_stock INTEGER NOT NULL,
+-- MODIFY COLUMN product_image VARCHAR(600) NOT NULL;
+
+-- Task #6
+-- Update table and add a primary key
 ALTER TABLE products
-MODIFY COLUMN product_name VARCHAR(300) NOT NULL,
-MODIFY COLUMN product_desc VARCHAR(600) NOT NULL,
-MODIFY COLUMN product_price NUMERIC(7,2) CHECK (product_price > 0),
-MODIFY COLUMN product_amount_in_stock INTEGER NOT NULL,
-MODIFY COLUMN product_image VARCHAR(600) NOT NULL;
+ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
