@@ -4,7 +4,6 @@
 -- DROP TABLE addresses;
 -- DROP TABLE cities;
 
-
 CREATE TABLE employees (
     id INT PRIMARY KEY AUTO_INCREMENT, -- MySQL
     -- id SERIAL PRIMARY KEY, -- PostgreSQL
