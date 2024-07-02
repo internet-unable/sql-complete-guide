@@ -15,6 +15,21 @@ CREATE TABLE memberships (
     gender VARCHAR(200)
 );
 
+CREATE TABLE customers(
+    id INT PRIMARY KEY AUTO_INCREMENT, -- MySQL
+    -- id SERIAL PRIMARY KEY, -- PostgreSQL
+    first_name VARCHAR(200),
+    last_name VARCHAR(200),
+    email VARCHAR(200)
+);
+
+CREATE TABLE orders(
+    id INT PRIMARY KEY AUTO_INCREMENT, -- MySQL
+    -- id SERIAL PRIMARY KEY, -- PostgreSQL
+    amount_billed NUMERIC(5, 2),
+    customer_id INT REFERENCES customers
+);
+
 INSERT INTO memberships (
     membership_start,
     membership_end,
@@ -26,7 +41,6 @@ INSERT INTO memberships (
     price,
     billing_frequency,
     gender
-
 )
 VALUES (
     '2021-10-01',
@@ -74,7 +88,6 @@ INSERT INTO memberships (
     price,
     billing_frequency,
     gender
-
 )
 VALUES (
     '2021-05-02',
@@ -100,7 +113,6 @@ INSERT INTO memberships (
     price,
     billing_frequency,
     gender
-
 )
 VALUES (
     '2021-10-18',
@@ -113,4 +125,41 @@ VALUES (
     19.99,
     12,
     'DivErs'
+);
+
+INSERT INTO customers(
+    first_name,
+    last_name,
+    email
+)
+VALUES(
+    'Max',
+    'Schwarz',
+    'max@test.com'
+),(
+    'Manu',
+    'Lorenz',
+    'manu@test.com'
+),(
+    'Julia',
+    'Meyers',
+    'juli@test.com'
+);
+
+INSERT INTO orders(
+   amount_billed,
+   customer_id 
+)
+VALUES(
+    48.99,
+    1
+), (
+    27.45,
+    2
+), (
+    19.49,
+    1
+), (
+    8.49,
+    3
 );
